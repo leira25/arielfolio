@@ -78,6 +78,19 @@ p {
 	transition: 0.3s ease;
 	transition-property: background-color, color;
 }
+.cta-certificate{
+	display: inline-block;
+	padding: 5px 20px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid crimson;
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-top: 20px;
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+}
 .cta:hover {
 	color: white;
 	background-color: crimson;
