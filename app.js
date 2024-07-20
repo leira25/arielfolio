@@ -33,3 +33,17 @@ document.getElementById("myBtn").addEventListener("click", function () {
 document.getElementById("myBtn2").addEventListener("click", function () {
   $("#carouselModalSliderz").modal("show");
 });
+document.getElementById("myBtn3").addEventListener("click", function () {
+  $("#carouselModalNC").modal("show");
+});
+document.getElementById("myBtn4").addEventListener("click", function () {
+  $("#carouselModalJS").modal("show");
+});
+document.getElementById("myBtn5").addEventListener("click", function () {
+  $("#carouselModalUI").modal("show");
+});
+document.getElementById("myBtn6").addEventListener("click", function () {
+  $("#carouselModalReact").modal("show");
+});
+
+
