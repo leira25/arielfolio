@@ -40,11 +40,27 @@
   <!-- Hero Section  -->
   <section id="hero">
     <div class="hero container">
-      <div>
-        <h1>Hello, <span></span></h1>
-        <h1>My Name is <span></span></h1>
-        <h1>Ariel Yandan<span></span></h1>
-        <a href="#projects" type="button" class="cta">Portfolio</a>
+      <div class="hero-grid">
+        <div class="hero-visual">
+          <div class="hero-photo-card">
+            <img src="./img/img-2.JPG" alt="Ariel Yandan portrait">
+          </div>
+        </div>
+        <div class="hero-copy">
+          <p class="hero-eyebrow">Web Developer</p>
+          <h1><span>Creative Web</span> Developer</h1>
+          <div class="hero-divider"></div>
+          <p class="hero-subtitle">I build clean, conversion-focused websites and web apps for businesses that want better UX, stronger branding, and measurable growth.</p>
+          <div class="hero-actions">
+            <a href="#about" type="button" class="cta">About Me</a>
+            <a href="#projects" type="button" class="cta cta-secondary">View Projects</a>
+          </div>
+          <div class="hero-foot">
+            <!-- <p><strong>W.</strong> Award-level quality approach</p> -->
+            <p><strong>3+</strong> Live products launched</p>
+            <p><strong>WP</strong> WordPress development experience</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -102,37 +118,88 @@
     <div class="projects container">
       <div class="projects-header">
         <h1 class="section-title">Recent <span>Projects</span></h1>
+        <p>A selection of projects I built across mobile, web, and UI design. I can quickly add more projects below as I complete new work.</p>
       </div>
       <div class="all-projects">
         <div class="project-item">
           <div class="project-info">
             <h1>SLIDERZ</h1>
-            <h2>A mobile puzzle game built using React Native</h2>
-            <p>SLIDERZ is a classic puzzle game that has been enjoyed by people of all ages for decades. The objective
-              of the game is to slide the tiles to arrange them in the correct order. The game features a grid of
-              squares with one tile missing, and the player must move the tiles around by sliding them horizontally or
-              vertically into the empty space until the puzzle is complete.</p>
+            <h2>Mobile puzzle game built with React Native</h2>
+            <p>SLIDERZ is a sliding puzzle experience focused on speed, smooth gestures, and replay value. The game includes clean board interactions and a polished mobile-first interface.</p>
             <button id="myBtn" class="cta-project">View</button>
           </div>
           <div class="project-img">
-            <img src="img/sliderzlogo.png" alt="img">
+            <img src="img/sliderzlogo.png" alt="SLIDERZ logo">
           </div>
         </div>
         <div class="project-item">
           <div class="project-info">
             <h1>POSGenius</h1>
-            <h2>A Web-based Point of Sale Management System built using PHP and MySql</h2>
-            <p> Is a 2 in 1 system that can help you track your sales, and make the ordering process faster.</p>
-            <h2>POSGenius link:</h2> <a href="https://mteaninerscafeolongapo.shop/pos/welcome.php">
-              <h2>mteaninerscafeolongapo.shop</h2>
-            </a>
+            <h2>Web-based Point of Sale built with PHP and MySQL</h2>
+            <p>POSGenius helps cafe operations run faster by handling transactions, sales tracking, and inventory workflows in one admin dashboard.</p>
+            <div class="project-links">
+              <a class="project-link" href="https://mteaninerscafeolongapo.shop/pos/welcome.php">Live Site</a>
+            </div>
             <button id="myBtn2" class="cta-project">View</button>
           </div>
           <div class="project-img">
-            <img src="img/poslogo.png" alt="img">
+            <img src="img/poslogo.png" alt="POSGenius logo">
           </div>
         </div>
-
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Flipfin</h1>
+            <h2>Live fintech-focused web product</h2>
+            <p>Flipfin is one of my deployed production projects. This build demonstrates a polished user interface, responsive layout behavior, and clear product presentation.</p>
+            <div class="project-links">
+              <a class="project-link" href="https://flipfin.tech/" target="_blank" rel="noopener noreferrer">Live Site</a>
+            </div>
+          </div>
+          <div class="project-img">
+            <img src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/72adb3de-1a58-45c8-82a3-8edac240bd60-c-users-ariel-desktop-flipfin-vercel-app/assets/icons/logo-1.png" alt="Flipfin logo">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Pepiq</h1>
+            <h2>Live application project</h2>
+            <p>Pepiq is a live app I developed and deployed. It highlights practical full-stack delivery, usable flows, and real-world deployment readiness.</p>
+            <div class="project-links">
+              <a class="project-link" href="https://pepiq.app/" target="_blank" rel="noopener noreferrer">Live Site</a>
+            </div>
+          </div>
+          <div class="project-img">
+            <img src="https://pepiq.app/assets/logo.png" alt="Pepiq logo">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>KaizenOS</h1>
+            <h2>Interactive live web experience</h2>
+            <p>KaizenOS is another deployed project in my portfolio. It showcases my ability to ship a branded interface with a focused and engaging user experience.</p>
+            <div class="project-links">
+              <a class="project-link" href="https://kaizenos.fun/" target="_blank" rel="noopener noreferrer">Live Site</a>
+            </div>
+          </div>
+          <div class="project-img">
+            <img src="https://pbs.twimg.com/profile_images/2010593481610383360/49tn2qgl_400x400.jpg" alt="KaizenOS logo">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>HobbesOnSol</h1>
+            <h2>Live web project</h2>
+            <p>HobbesOnSol is part of my active project portfolio, showing another production-ready deployment with a focused user experience and clear presentation.</p>
+            <div class="project-links">
+              <a class="project-link" href="https://hobbesonsol.fun/" target="_blank" rel="noopener noreferrer">Live Site</a>
+            </div>
+          </div>
+          <div class="project-img">
+            <img src="https://hobbesonsol.fun/assets/logo.jpg" alt="HobbesOnSol logo">
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
   <!-- End Projects Section -->
 
@@ -329,11 +396,13 @@
       <div class="col-right">
         <h1 class="section-title">About <span>me</span></h1>
         <h2>Web Developer</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, velit alias eius non illum beatae atque
-          repellat ratione qui veritatis repudiandae adipisci maiores. At inventore necessitatibus deserunt
-          exercitationem cumque earum omnis ipsum rem accusantium quis, quas quia, accusamus provident suscipit magni!
-          Expedita sint ad dolore, commodi labore nihil velit earum ducimus nulla quae nostrum fugit aut, deserunt
-          reprehenderit libero enim!</p>
+        <p>I am Ariel Yandan, a web developer focused on building responsive and user-friendly applications. I have
+          hands-on experience in front-end and back-end development through projects like SLIDERZ, a mobile puzzle game
+          built with React Native, and POSGenius, a web-based point of sale management system built with PHP and MySQL.
+          I also have experience in WordPress development, including building and customizing business websites.
+          I continuously improve my skills through certifications in Computer System Servicing, JavaScript, UI/UX, and
+          React JS. My goal is to create reliable digital solutions that solve real problems and deliver a smooth user
+          experience.</p>
         <a href="#" class="cta">Download Resume</a>
       </div>
     </div>
