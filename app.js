@@ -111,6 +111,9 @@ async function updateVisitCount() {
   }
 
   if (window.location.protocol === "file:") {
+    visitCountElements.forEach((element) => {
+      element.textContent = "—";
+    });
     return;
   }
 
@@ -133,6 +136,7 @@ async function updateVisitCount() {
   try {
     const response = await fetch(endpoint, { cache: "no-store" });
     if (!response.ok) {
+      console.warn("Visit counter request failed:", response.status);
       return;
     }
 
@@ -142,7 +146,9 @@ async function updateVisitCount() {
       (typeof data?.value === "number" && data.value) ||
       (typeof data?.counter?.value === "number" && data.counter.value) ||
       (typeof data?.count === "number" && data.count) ||
-      (typeof data?.data?.value === "number" && data.data.value);
+      (typeof data?.data?.value === "number" && data.data.value) ||
+      (typeof data?.up_count === "number" && data.up_count) ||
+      (typeof data?.data?.up_count === "number" && data.data.up_count);
 
     if (typeof value === "number") {
       const formatted = value.toLocaleString();
@@ -151,6 +157,7 @@ async function updateVisitCount() {
       });
     }
   } catch {
+    console.warn("Visit counter request failed.");
   }
 }
 
