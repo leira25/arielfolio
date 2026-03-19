@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ariel Yandan is a web developer building responsive websites, web apps, and WordPress sites. View projects, certificates, and contact details.">
   <link rel="stylesheet" href="style.css">
-  <title>My Portfolio</title>
+  <title>Ariel Yandan | Web Developer</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -20,10 +21,10 @@
           </a>
         </div>
         <div class="nav-list">
-          <div class="hamburger">
+          <button class="hamburger" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">
             <div class="bar"></div>
-          </div>
-          <ul>
+          </button>
+          <ul id="primary-navigation">
             <li><a href="#hero" data-after="Home">Home</a></li>
             <li><a href="#services" data-after="Service">Certificates</a></li>
             <li><a href="#projects" data-after="Projects">Projects</a></li>
@@ -59,6 +60,7 @@
             <!-- <p><strong>W.</strong> Award-level quality approach</p> -->
             <p><strong>3+</strong> Live products launched</p>
             <p><strong>WP</strong> WordPress development experience</p>
+            <p><strong>Visits:</strong> <span id="visit-count-hero">—</span></p>
           </div>
         </div>
       </div>
@@ -93,7 +95,7 @@
             online course on freeCodeCamp </p>
 
             <button id="myBtn4" class="cta-certificate">View</button>
-        </div>
+        </div> 
         <div class="service-item">
           <div class="icon"><img src="img/figmalogo.jpg" /></div>
           <h2>UI / UX</h2>
@@ -123,9 +125,14 @@
       <div class="all-projects">
         <div class="project-item">
           <div class="project-info">
-            <h1>SLIDERZ</h1>
-            <h2>Mobile puzzle game built with React Native</h2>
+            <h3 class="project-title">SLIDERZ</h3>
+            <p class="project-subtitle">Mobile puzzle game built with React Native</p>
             <p>SLIDERZ is a sliding puzzle experience focused on speed, smooth gestures, and replay value. The game includes clean board interactions and a polished mobile-first interface.</p>
+            <ul class="project-meta" aria-label="Project details">
+              <li><strong>Role:</strong> Developer</li>
+              <li><strong>Stack:</strong> React Native</li>
+              <li><strong>Focus:</strong> Smooth gestures, replay value</li>
+            </ul>
             <button id="myBtn" class="cta-project">View</button>
           </div>
           <div class="project-img">
@@ -134,9 +141,14 @@
         </div>
         <div class="project-item">
           <div class="project-info">
-            <h1>POSGenius</h1>
-            <h2>Web-based Point of Sale built with PHP and MySQL</h2>
+            <h3 class="project-title">POSGenius</h3>
+            <p class="project-subtitle">Web-based Point of Sale built with PHP and MySQL</p>
             <p>POSGenius helps cafe operations run faster by handling transactions, sales tracking, and inventory workflows in one admin dashboard.</p>
+            <ul class="project-meta" aria-label="Project details">
+              <li><strong>Role:</strong> Developer</li>
+              <li><strong>Stack:</strong> PHP, MySQL</li>
+              <li><strong>Live:</strong> mteaninerscafeolongapo.shop</li>
+            </ul>
             <div class="project-links">
               <a class="project-link" href="https://mteaninerscafeolongapo.shop/pos/welcome.php" target="_blank" rel="noopener noreferrer">Live Site</a>
             </div>
@@ -148,9 +160,14 @@
         </div>
         <div class="project-item">
           <div class="project-info">
-            <h1>Powmill Milk Bar</h1>
-            <h2>WordPress business website</h2>
+            <h3 class="project-title">Powmill Milk Bar</h3>
+            <p class="project-subtitle">WordPress business website</p>
             <p>WordPress website build focused on a clean, modern layout, easy content updates, and a fast mobile experience.</p>
+            <ul class="project-meta" aria-label="Project details">
+              <li><strong>Role:</strong> Developer</li>
+              <li><strong>Stack:</strong> WordPress</li>
+              <li><strong>Live:</strong> powmillmilkbar.co.uk</li>
+            </ul>
             <div class="project-links">
               <a class="project-link" href="https://powmillmilkbar.co.uk/" target="_blank" rel="noopener noreferrer">Live Site</a>
             </div>
@@ -161,9 +178,14 @@
         </div>
         <div class="project-item">
           <div class="project-info">
-            <h1>Japantown Lions</h1>
-            <h2>WordPress organization website</h2>
+            <h3 class="project-title">Japantown Lions</h3>
+            <p class="project-subtitle">WordPress organization website</p>
             <p>WordPress website for an organization with clear navigation, accessible sections, and simple content management for updates.</p>
+            <ul class="project-meta" aria-label="Project details">
+              <li><strong>Role:</strong> Developer</li>
+              <li><strong>Stack:</strong> WordPress</li>
+              <li><strong>Live:</strong> japantownlions.org</li>
+            </ul>
             <div class="project-links">
               <a class="project-link" href="https://japantownlions.org/" target="_blank" rel="noopener noreferrer">Live Site</a>
             </div>
@@ -174,9 +196,14 @@
         </div>
         <div class="project-item">
           <div class="project-info">
-            <h1>Raith Rovers Competitions</h1>
-            <h2>WordPress competitions website</h2>
+            <h3 class="project-title">Raith Rovers Competitions</h3>
+            <p class="project-subtitle">WordPress competitions website</p>
             <p>WordPress site build designed for quick browsing and conversion, with a straightforward structure that is easy to maintain.</p>
+            <ul class="project-meta" aria-label="Project details">
+              <li><strong>Role:</strong> Developer</li>
+              <li><strong>Stack:</strong> WordPress</li>
+              <li><strong>Live:</strong> raithroverscompetitions.co.uk</li>
+            </ul>
             <div class="project-links">
               <a class="project-link" href="https://raithroverscompetitions.co.uk/" target="_blank" rel="noopener noreferrer">Live Site</a>
             </div>
@@ -187,9 +214,14 @@
         </div>
         <div class="project-item">
           <div class="project-info">
-            <h1>Flipfin</h1>
-            <h2>Live fintech-focused web product</h2>
+            <h3 class="project-title">Flipfin</h3>
+            <p class="project-subtitle">Live fintech-focused web product</p>
             <p>Flipfin is one of my deployed production projects. This build demonstrates a polished user interface, responsive layout behavior, and clear product presentation.</p>
+            <ul class="project-meta" aria-label="Project details">
+              <li><strong>Role:</strong> Developer</li>
+              <li><strong>Live:</strong> flipfin.tech</li>
+              <li><strong>Focus:</strong> Product UI, responsive layout</li>
+            </ul>
             <div class="project-links">
               <a class="project-link" href="https://flipfin.tech/" target="_blank" rel="noopener noreferrer">Live Site</a>
             </div>
@@ -200,9 +232,14 @@
         </div>
         <div class="project-item">
           <div class="project-info">
-            <h1>Pepiq</h1>
-            <h2>Live application project</h2>
+            <h3 class="project-title">Pepiq</h3>
+            <p class="project-subtitle">Live application project</p>
             <p>Pepiq is a live app I developed and deployed. It highlights practical full-stack delivery, usable flows, and real-world deployment readiness.</p>
+            <ul class="project-meta" aria-label="Project details">
+              <li><strong>Role:</strong> Developer</li>
+              <li><strong>Live:</strong> pepiq.app</li>
+              <li><strong>Focus:</strong> Usable flows, deployment</li>
+            </ul>
             <div class="project-links">
               <a class="project-link" href="https://pepiq.app/" target="_blank" rel="noopener noreferrer">Live Site</a>
             </div>
@@ -213,9 +250,14 @@
         </div>
         <div class="project-item">
           <div class="project-info">
-            <h1>KaizenOS</h1>
-            <h2>Interactive live web experience</h2>
+            <h3 class="project-title">KaizenOS</h3>
+            <p class="project-subtitle">Interactive live web experience</p>
             <p>KaizenOS is another deployed project in my portfolio. It showcases my ability to ship a branded interface with a focused and engaging user experience.</p>
+            <ul class="project-meta" aria-label="Project details">
+              <li><strong>Role:</strong> Developer</li>
+              <li><strong>Live:</strong> kaizenos.fun</li>
+              <li><strong>Focus:</strong> Branded UI, interaction</li>
+            </ul>
             <div class="project-links">
               <a class="project-link" href="https://kaizenos.fun/" target="_blank" rel="noopener noreferrer">Live Site</a>
             </div>
@@ -226,9 +268,14 @@
         </div>
         <div class="project-item">
           <div class="project-info">
-            <h1>HobbesOnSol</h1>
-            <h2>Live web project</h2>
+            <h3 class="project-title">HobbesOnSol</h3>
+            <p class="project-subtitle">Live web project</p>
             <p>HobbesOnSol is part of my active project portfolio, showing another production-ready deployment with a focused user experience and clear presentation.</p>
+            <ul class="project-meta" aria-label="Project details">
+              <li><strong>Role:</strong> Developer</li>
+              <li><strong>Live:</strong> hobbesonsol.fun</li>
+              <li><strong>Focus:</strong> Clear presentation, UX</li>
+            </ul>
             <div class="project-links">
               <a class="project-link" href="https://hobbesonsol.fun/" target="_blank" rel="noopener noreferrer">Live Site</a>
             </div>
@@ -243,11 +290,11 @@
   <!-- End Projects Section -->
 
   <!-- sliderz gallery -->
-  <div class="modal fade" id="carouselModal" tabindex="-1" aria-labelledby="carouselModalLabel" aria-hidden="true">
+  <div class="modal fade" id="carouselModal" tabindex="-1" aria-labelledby="carouselModalLabelSliderz" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="carouselModalLabel">SLIDERZ Gallery</h5>
+          <h5 class="modal-title" id="carouselModalLabelSliderz">SLIDERZ Gallery</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -294,12 +341,12 @@
   <!-- end of sliderz gallery -->
 
   <!-- POSGenius gallery -->
-  <div class="modal fade" id="carouselModalSliderz" tabindex="-1" aria-labelledby="carouselModalLabel"
+  <div class="modal fade" id="carouselModalSliderz" tabindex="-1" aria-labelledby="carouselModalLabelPosgenius"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="carouselModalLabel">POSGenius Gallery</h5>
+          <h5 class="modal-title" id="carouselModalLabelPosgenius">POSGenius Gallery</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -349,12 +396,12 @@
   <!-- end of POSGenius gallery -->
 
   <!-- NCII Certificate -->
-  <div class="modal fade" id="carouselModalNC" tabindex="-1" aria-labelledby="carouselModalLabel"
+  <div class="modal fade" id="carouselModalNC" tabindex="-1" aria-labelledby="carouselModalLabelNCII"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="carouselModalLabel">CSS National Certificate II</h5>
+          <h5 class="modal-title" id="carouselModalLabelNCII">Computer Systems Servicing NC II</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -368,12 +415,12 @@
   <!-- End of NCII Certificate -->
 
   <!-- JavaScript Certificate -->
-  <div class="modal fade" id="carouselModalJS" tabindex="-1" aria-labelledby="carouselModalLabel"
+  <div class="modal fade" id="carouselModalJS" tabindex="-1" aria-labelledby="carouselModalLabelJS"
   aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="carouselModalLabel">CSS National Certificate II</h5>
+        <h5 class="modal-title" id="carouselModalLabelJS">JavaScript Certification</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -387,12 +434,12 @@
   <!-- end of JavaScript Certificate -->
 
   <!-- UI/UX Certificate -->
-  <div class="modal fade" id="carouselModalUI" tabindex="-1" aria-labelledby="carouselModalLabel"
+  <div class="modal fade" id="carouselModalUI" tabindex="-1" aria-labelledby="carouselModalLabelUI"
   aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="carouselModalLabel">UI/UX Certification</h5>
+        <h5 class="modal-title" id="carouselModalLabelUI">UI/UX Certification</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -406,12 +453,12 @@
   <!-- End of UI/UX Certificate -->
 
 <!-- reactjs certification -->
-<div class="modal fade" id="carouselModalReact" tabindex="-1" aria-labelledby="carouselModalLabel"
+<div class="modal fade" id="carouselModalReact" tabindex="-1" aria-labelledby="carouselModalLabelReact"
   aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="carouselModalLabel">React JS Tutorial Certification</h5>
+        <h5 class="modal-title" id="carouselModalLabelReact">React JS Tutorial Certification</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -441,8 +488,8 @@
         <div class="col-right about-content">
           <h1 class="section-title">About <span>me</span></h1>
           <p class="about-lead">
-            I’m Ariel Yandan. I build responsive websites and web apps with clean UI, solid performance, and code that’s easy to maintain.
-            I’ve shipped projects like SLIDERZ (React Native) and POSGenius (PHP/MySQL), and I also build WordPress sites for businesses and organizations.
+            I'm Ariel Yandan. I build responsive websites and web apps with clean UI, solid performance, and code that's easy to maintain.
+            I've shipped projects like SLIDERZ (React Native) and POSGenius (PHP/MySQL), and I also build WordPress sites for businesses and organizations.
           </p>
           <div class="about-grid">
             <div class="about-block">
@@ -535,14 +582,16 @@
               src="https://img.icons8.com/bubbles/100/000000/linkedin.png" /></a>
         </div>
       </div>
-      <p>Copyright © 2024 Ariel. All rights reserved</p>
+      <p class="visit-counter" aria-label="Portfolio visit counter">Visits: <span id="visit-count">—</span></p>
+      <p>Copyright &copy; 2024 Ariel. All rights reserved</p>
     </div>
   </section>
   <!-- End Footer -->
-  <script src="./app.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="./app.js"></script>
 </body>
 
 </html>
+
