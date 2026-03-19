@@ -1,12 +1,45 @@
 const BASE_ENDPOINT =
   "https://api.counterapi.dev/v2/ariel-yandans-team-3356/first-counter-3356";
 
+const https = require("https");
+
 function getMode(req) {
   const mode = String(req.query?.mode || "up").toLowerCase();
   if (mode === "get") return "get";
   if (mode === "up") return "up";
   if (mode === "stats") return "stats";
   return "up";
+}
+
+function httpGetJson(url, apiKey) {
+  return new Promise((resolve, reject) => {
+    const request = https.request(
+      url,
+      {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+        },
+      },
+      (response) => {
+        let body = "";
+        response.setEncoding("utf8");
+        response.on("data", (chunk) => {
+          body += chunk;
+        });
+        response.on("end", () => {
+          resolve({
+            statusCode: response.statusCode || 500,
+            headers: response.headers,
+            body,
+          });
+        });
+      }
+    );
+
+    request.on("error", reject);
+    request.end();
+  });
 }
 
 module.exports = async (req, res) => {
@@ -29,19 +62,13 @@ module.exports = async (req, res) => {
         : BASE_ENDPOINT;
 
   try {
-    const response = await fetch(url, {
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-      },
-    });
-
-    const text = await response.text();
-    res.status(response.status);
+    const response = await httpGetJson(url, apiKey);
+    res.status(response.statusCode);
 
     try {
-      res.json(JSON.parse(text));
+      res.json(JSON.parse(response.body));
     } catch {
-      res.send(text);
+      res.send(response.body);
     }
   } catch (error) {
     res.status(502).json({
@@ -49,4 +76,3 @@ module.exports = async (req, res) => {
     });
   }
 };
-
