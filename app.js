@@ -1,7 +1,60 @@
 const hamburger = document.querySelector(".header .nav-bar .nav-list .hamburger");
+const themeToggle = document.querySelector(".header .nav-bar .nav-list .theme-toggle");
 const mobileMenu = document.querySelector(".header .nav-bar .nav-list ul");
 const menuItems = document.querySelectorAll(".header .nav-bar .nav-list ul li a");
 const header = document.querySelector(".header.containerHeader");
+
+function applyTheme(theme, persist = false) {
+  const normalizedTheme = theme === "dark" ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", normalizedTheme);
+
+  if (persist) {
+    try {
+      window.localStorage.setItem("theme", normalizedTheme);
+    } catch {
+    }
+  }
+
+  if (themeToggle) {
+    const isDark = normalizedTheme === "dark";
+    themeToggle.setAttribute("aria-pressed", String(isDark));
+    themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+  }
+}
+
+function initTheme() {
+  let storedTheme = null;
+  try {
+    storedTheme = window.localStorage.getItem("theme");
+  } catch {
+  }
+
+  if (storedTheme === "dark" || storedTheme === "light") {
+    applyTheme(storedTheme, false);
+    return;
+  }
+
+  const prefersDark =
+    "matchMedia" in window && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  applyTheme(prefersDark ? "dark" : "light", false);
+
+  if ("matchMedia" in window) {
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    media.addEventListener?.("change", (event) => {
+      let current = null;
+      try {
+        current = window.localStorage.getItem("theme");
+      } catch {
+      }
+      if (current === "dark" || current === "light") {
+        return;
+      }
+      applyTheme(event.matches ? "dark" : "light", false);
+    });
+  }
+}
+
+initTheme();
 
 function setMenuOpen(isOpen) {
   if (!hamburger || !mobileMenu) {
@@ -23,14 +76,15 @@ if (hamburger && mobileMenu) {
 
 if (header) {
   document.addEventListener("scroll", () => {
-    const scrollPosition = window.scrollY;
-    if (scrollPosition > 120) {
-      header.style.backgroundColor = "rgba(248, 250, 252, 0.98)";
-      header.style.boxShadow = "0 10px 24px rgba(15, 23, 42, 0.08)";
-    } else {
-      header.style.backgroundColor = "rgba(248, 250, 252, 0.9)";
-      header.style.boxShadow = "none";
-    }
+    header.classList.toggle("is-scrolled", window.scrollY > 120);
+  });
+  header.classList.toggle("is-scrolled", window.scrollY > 120);
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme");
+    applyTheme(current === "dark" ? "light" : "dark", true);
   });
 }
 
@@ -162,5 +216,3 @@ async function updateVisitCount() {
 }
 
 updateVisitCount();
-
-
